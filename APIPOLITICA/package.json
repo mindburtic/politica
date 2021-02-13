@@ -1,0 +1,8 @@
+{
+  "name": "APIPOLITICA",
+  "version": "1.0.0",
+  "description": "backend para proyecto de politica",
+  "main": "index.js",
+  "author": "jose manuel burbano",
+  "license": "MIT"
+}
