@@ -813,6 +813,11 @@
   "resolved" "https://registry.npmjs.org/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz"
   "version" "1.0.2"
 
+"mongoose-paginate-v2@^1.3.14":
+  "integrity" "sha512-3esyrVGYun1s6r5c494zt6oYV6X9SwZ11TtCn4lfOs0rr0PVDK6HDXoSgScAnWjxpMiIMDAz2OIaBF5xM3fuaA=="
+  "resolved" "https://registry.npmjs.org/mongoose-paginate-v2/-/mongoose-paginate-v2-1.3.14.tgz"
+  "version" "1.3.14"
+
 "mongoose@*", "mongoose@^5.11.17":
   "integrity" "sha512-qggwwv+oTsjvlto9fhq17l2Mojl5Gn8GN7NxnaLjsZbjT4O5ONtKtGtymHZ23viGrlHn6rNFMJEnEql2G6tyrg=="
   "resolved" "https://registry.npmjs.org/mongoose/-/mongoose-5.11.17.tgz"
