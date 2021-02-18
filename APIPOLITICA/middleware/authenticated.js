@@ -1,7 +1,7 @@
 const jwt = require("jwt-simple");
 const moment = require("moment");
 
-const SECRE_KEY = "dfsk8g5bf58ssdHBAjb.*JGF86YLJ8Bx4JKBj44vasy6592652.*";
+const SECRE_KEY = "dfsk8g5bf58ssdHBAjbJGF86YLJ8Bx4JKBj44vasy6592652";
 
 //funcion para comprovar si tiene cabecera de authenticacion
 exports.ensureAuth = (req, res, next) => {
