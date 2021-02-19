@@ -3,14 +3,28 @@ const mongoosePaginate = require("mongoose-paginate-v2");
 const Schema = mongoose.Schema;
 
 const recordSchema = new Schema({
-  fullname: String,
+  firstName: String,
+  secondName: String,
+  surname: String,
+  secondSurname: String,
+  sex: String,
+  age: Number,
+  dateOfBirth: Date,
+  placeWhereWasBorn: String,
+  departmentLives: String,
+  municipalityLives: String,
+  residenceAddress: String,
+  isItDadOrMom: Boolean,
+  profession: String,
+  whatDoesHeWorkOn: String,
+  whatDoIRelateThisRecordTo: String,
   cedula: {
     type: String,
     unique: true,
   },
   tipo: String,
   cargo: String,
-  tel: Number,
+  phone: Number,
   email: {
     type: String,
     unique: true,
@@ -20,9 +34,9 @@ const recordSchema = new Schema({
   userUpdate: Date,
   rol: String,
   avatar: String,
-  record: {
+  user: {
     type: Schema.Types.ObjectId,
-    ref: "records",
+    ref: "users",
   },
   active: Boolean,
 });
