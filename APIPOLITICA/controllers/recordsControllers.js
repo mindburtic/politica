@@ -2,36 +2,36 @@ const Records = require("../models/Records");
 const User = require("../models/Users");
 const moment = require("moment");
 //slug para y shor id generar url
-const slug = require("slug");
-const shortid = require("shortid");
+// const slug = require("slug");
+// const shortid = require("shortid");
 //avatar
 const fs = require("fs");
 const path = require("path");
 
-exports.addExtintor = async (req, res) => {
+exports.addRecords = async (req, res) => {
   try {
     const body = req.body;
-    Url = body.placa;
-    const url = slug(Url).toLowerCase();
-    body.url = `${url}-${shortid.generate()}`;
+    // Url = body.placa;
+    // const url = slug(Url).toLowerCase();
+    // body.url = `${url}-${shortid.generate()}`;
     active = body.active;
     active = true;
     body.active = active;
     fechaCreate = moment();
     body.fechaCreate = fechaCreate;
-    const extintors = new Records(body);
+    const record = new Records(body);
 
     const user = await User.findById(req.params.id);
 
-    extintors.user = user;
-    await extintors.save((err, extintorStored) => {
+    record.user = user;
+    await record.save((err, extintorStored) => {
       if (err) {
-        res.status(500).json({ message: "El Extintor ya existe." });
+        res.status(500).json({ message: "El usuario ya existe." });
       } else {
         if (!extintorStored) {
-          res.status(404).json({ message: "Error al crear Extintor." });
+          res.status(404).json({ message: "Error al crear usuario." });
         } else {
-          user.Records.push(extintors._id);
+          user.Records.push(record._id);
           user.save((err, userStored) => {
             if (err) {
               res
@@ -41,12 +41,12 @@ exports.addExtintor = async (req, res) => {
               if (!userStored) {
                 res
                   .status(404)
-                  .json({ message: "Error al crear elemento y usuario." });
+                  .json({ message: "Error al crear usuario." });
               } else {
                 res.status(200).json({
                   code: 200,
                   iduser: extintorStored._id,
-                  message: "Elemento Creado Correctamente.",
+                  message: "Usuario registrado Correctamente.",
                 });
               }
             }
