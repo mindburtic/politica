@@ -29,7 +29,7 @@ const recordSchema = new Schema({
     type: String,
     unique: true,
   },
-  password: String,
+  nameWithWhomRelate: String,
   fechaCreate: Date,
   userUpdate: Date,
   rol: String,

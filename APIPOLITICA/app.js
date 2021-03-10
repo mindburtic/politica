@@ -9,6 +9,7 @@ const { API_VERSION } = require("./config");
 
 //Load routings
 const userRoutes = require("./routes/user");
+const recordRoutes = require("./routes/record");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -28,5 +29,6 @@ app.use((req, res, next) => {
 
 //Router Basic
 app.use(`/api/${API_VERSION}`, userRoutes);
+app.use(`/api/${API_VERSION}`, recordRoutes);
 
 module.exports = app;
